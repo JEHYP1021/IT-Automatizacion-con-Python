@@ -30,7 +30,7 @@ class Event:#Creamos una clase evento, que establece los atributos necesarios
     self.type = event_type
     self.machine = machine_name
     self.user = user
-
+#Lista de eventos
 events = [
     Event('2020-01-21 12:45:56', 'login', 'myworkstation.local', 'jordan'),
     Event('2020-01-22 15:53:42', 'logout', 'webserver.local', 'jordan'),
@@ -39,8 +39,8 @@ events = [
     Event('2020-01-21 08:20:01', 'login', 'webserver.local', 'jordan'),
     Event('2020-01-23 11:24:35', 'logout', 'mailserver.local', 'chris'),
 ]
-
+#Se pasa la lista de eventos por la funcion para que los organize y luego se guarda en una variable usuario.
 users = current_users(events)
 print(users)
-
+#Pasamos la variable usuario a la funcion "generar reporte", con esto obtenemos un reporte de los eventos organizados, por fechasy usuarios conectados
 generate_report(users)
