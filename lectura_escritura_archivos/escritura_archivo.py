@@ -5,7 +5,7 @@ directorios y variables de entorno y ejecutar comandos del sistema'''
 
 import os
 
-#Obtener la ruta obsoluta del scripit
+#Obtener la ruta obsoluta del script
 ruta_absoluta = os.path.dirname(os.path.abspath(__file__))
 
 #Crear la ruta del archivo dentro de la carpeta correcta
