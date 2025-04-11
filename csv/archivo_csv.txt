@@ -1,0 +1,4 @@
+Nombre: Sabrina Green, Teléfono: 802-867-5309, Función: Administradora del sistema
+Nombre: Eli Jones Eli Jones, Teléfono: 684-3481127, Función: Informático
+Nombre: Melody Daniels, Teléfono: 846-687-7436, Función: Programadora
+Nombre: Charlie Rivera, Teléfono: 698-746-3357, Función: Desarrollador web
