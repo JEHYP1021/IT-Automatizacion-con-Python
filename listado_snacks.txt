@@ -1,0 +1,6 @@
+1,patatas fritas,1.5
+
+2,galletas,1.0
+
+3,chicles,0.5
+
