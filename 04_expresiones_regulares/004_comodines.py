@@ -21,3 +21,9 @@ print(re.search(r"cat|dog", "I like cats."))
 print(re.search(r"cat|dog", "I love dogs!"))
 print(re.search(r"cat|dog", "I like both dogs and cats."))
 print(re.findall(r"cat|dog", "I like both dogs and cats."))
+
+#encontrar puntos comas y signos de interrogacion dentro de una cadena
+
+texto = "Hola, ¿cómo estás? Espero que estés bien. ¡Hasta luego!"
+resultado = re.findall(r"[.,;¿?]", texto)
+print(resultado)  # ['¿', '?', '.', '¡']
