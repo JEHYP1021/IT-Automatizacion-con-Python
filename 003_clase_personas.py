@@ -33,3 +33,35 @@ carolina = Alumnos("Carolina", 16, "ESO")
 print("***LISTA DE ALUMNOS***\n")
 print(carlos.mostrar_informacion())
 print(carolina.mostrar_informacion())
+
+
+class GestorAlumnos:
+    def __init__(self):
+        self.alumnos = []
+
+    def agregar_alumno(self, alumno):
+        self.alumnos.append(alumno)
+
+    def mostrar_alumnos(self):
+        for alumno in self.alumnos:
+            alumno.mostrar_informacion()
+            print("---------------------")
+gestor = GestorAlumnos()
+while True:
+    print("1. Agregar alumno")
+    print("2. Mostrar alumnos")
+    print("3. Salir")
+    opcion = input("Seleccione una opción: ")
+
+    if opcion == "1":
+        nombre = input("Nombre: ")
+        edad = int(input("Edad: "))
+        curso = input("Curso: ")
+        nuevo_alumno = Alumnos(nombre, edad, curso)
+        gestor.agregar_alumno(nuevo_alumno)
+    elif opcion == "2":
+        gestor.mostrar_alumnos()
+    elif opcion == "3":
+        break
+    else:
+        print("Opción no válida.")
