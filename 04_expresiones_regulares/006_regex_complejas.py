@@ -63,7 +63,8 @@ cuatro opcionales después del guión. El código postal debe ir precedido de al
 Actualice la expresión regular.'''
 
 def correct_function(text):
-  result = re.search(r"(?<!^)\s\d{5}(-\d{4})?", text)  # Corrected regex pattern with space
+  result = re.search(r"(?<!^)\s\d{5}(-\d{4})?", text)  # El simbolo (?<!^) asegura que el código postal no esté al principio del texto.
+  # El símbolo \s asegura que haya al menos un espacio antes del código postal.
   return result is not None
 
 def check_zip_code(text):
