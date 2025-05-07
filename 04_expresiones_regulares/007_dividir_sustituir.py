@@ -35,3 +35,31 @@ print(transform_record("Melody Daniels,846-687-7436,Programmer"))
 
 print(transform_record("Charlie Rivera,698-746-3357,Web Developer")) 
 # Charlie Rivera,+1-698-746-3357,Web Developer
+
+
+#BUSCAR UNA O MAS PALABRAS QUE CONTENGAN AL MENOS 3 VOCALES SEGUIDAS:
+'''EJERCICIO 2
+La función multi_vowel_words() devuelve todas las palabras con 3 o más vocales consecutivas (a, e, i, o, u).
+ Rellene la expresión regular para hacerlo.'''
+
+def multi_vowel_words(text):
+  pattern = r"\b\w*[aeiou]{3,}\w*\b"#\b...\b Busca palbaras completas
+  #\w* Permite cualquier cantidad de letras antes y despues de la palabra
+  #[aeiou]{3,} Busca 3 o mas vocales consecutivas
+  result = re.findall(pattern, text)
+  return result
+
+print(multi_vowel_words("Life is beautiful")) 
+# ['beautiful']
+
+print(multi_vowel_words("Obviously, the queen is courageous and gracious.")) 
+# ['Obviously', 'queen', 'courageous', 'gracious']
+
+print(multi_vowel_words("The rambunctious children had to sit quietly and await their delicious dinner.")) 
+# ['rambunctious', 'quietly', 'delicious']
+
+print(multi_vowel_words("The order of a data queue is First In First Out (FIFO)")) 
+# ['queue']
+
+print(multi_vowel_words("Hello world!")) 
+# []
