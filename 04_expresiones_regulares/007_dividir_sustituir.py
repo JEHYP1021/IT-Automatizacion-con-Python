@@ -63,3 +63,26 @@ print(multi_vowel_words("The order of a data queue is First In First Out (FIFO)"
 
 print(multi_vowel_words("Hello world!")) 
 # []
+
+
+'''EJERCICIO 3
+La función transform_comments() convierte los comentarios de un script Python en comentarios utilizables por un compilador C.
+Esto significa buscar texto que empiece con una almohadilla (#) y sustituirla por barras dobles (//), que es el indicador de comentario 
+de una sola línea de C. Para el propósito de este ejercicio, ignoraremos la posibilidad de una almohadilla incrustada dentro de un 
+comando Python, y asumiremos que sólo se usa para indicar un comentario. También queremos tratar las marcas de almohadilla repetitivas 
+(##), (###), etc., como un único indicador de comentario, que se sustituirá sólo por (//) y no por (#//) o (//#). Rellene los parámetros 
+# del método de sustitución para completar esta función: '''
+
+
+def transform_comments(line_of_code):
+  result = re.sub(r"\s*#+", r"//", line_of_code)
+  return result
+
+print(transform_comments("### Start of program")) 
+# Should be "// Start of program"
+print(transform_comments("  number = 0   ## Initialize the variable")) 
+# Should be "  number = 0   // Initialize the variable"
+print(transform_comments("  number += 1   # Increment the variable")) 
+# Should be "  number += 1   // Increment the variable"
+print(transform_comments("  return(number)")) 
+# Should be "  return(number)"
