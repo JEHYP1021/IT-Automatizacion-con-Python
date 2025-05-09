@@ -86,3 +86,20 @@ print(transform_comments("  number += 1   # Increment the variable"))
 # Should be "  number += 1   // Increment the variable"
 print(transform_comments("  return(number)")) 
 # Should be "  return(number)"
+
+
+
+'''EJERCICIO 4
+La función convert_phone_number() busca un formato de número de teléfono estadounidense: XXX-XXX-XXXX (3 dígitos seguidos de un guión, 
+3 dígitos más seguidos de un guión, y 4 dígitos), y lo convierte a un formato más formal que tiene este aspecto: (XXX) XXX-XXXX. Rellene
+ la expresión regular para completar esta función.'''
+
+
+def convert_phone_number(phone):
+  result = re.sub(r"\b(\d{3})-(\d{3})-(\d{4})\b", r"(\1) \2-\3", phone)
+  return result
+
+print(convert_phone_number("My number is 212-345-9999.")) # My number is (212) 345-9999.
+print(convert_phone_number("Please call 888-555-1234")) # Please call (888) 555-1234
+print(convert_phone_number("123-123-12345")) # 123-123-12345
+print(convert_phone_number("Phone number of Buckingham Palace is +44 303 123 7300")) # Phone number of Buckingham Palace is +44 303 123 7300
